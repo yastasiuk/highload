@@ -1,0 +1,2 @@
+*/5 * * * * root node ./index.js >> /var/log/cron.log 2>&1
+
