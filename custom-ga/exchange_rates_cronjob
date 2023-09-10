@@ -1,2 +1,2 @@
-*/5 * * * * root node ./index.js >> /var/log/cron.log 2>&1
+*/5 * * * * root /usr/local/bin/node ./index.js >> /var/log/cron.log 2>&1
 
