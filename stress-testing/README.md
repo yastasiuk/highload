@@ -10,9 +10,24 @@
 └── README.md - some random docs
 ```
 
+### Endpoints
+- `/statistics` - getting information about fetched URLS(testing purposes)
+- `/*` - fallback route, which adds requested ULR to MySQL(except `/favicon.ico`)
+URL request schema:
+```python
+class Request(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    url = db.Column(db.String(500))
+    method = db.Column(db.String(10))
+    user_agent = db.Column(db.String(500))
+    timestamp = db.Column(db.DateTime, default=datetime.utcnow)
+```
+
 ### How to start
 1. Start python service with MySQL
 ```bash
+cd ./simple_server
+docker-compose up --build
 ```
 2. Go to siege folder
 ```bash
