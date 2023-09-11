@@ -41,7 +41,8 @@ cd ./siege
 For more options see [Siege docs](https://github.com/JoeDog/siege/blob/master/doc/siege.pod)
 
 ### Results
-1. 10 concurrency
+Tested on local environment
+#### 10 concurrency
 ```bash
 docker run --network=simple_server_default --rm simple-server-siege-container --concurrent=10 --time=30S
 ```
@@ -60,7 +61,7 @@ docker run --network=simple_server_default --rm simple-server-siege-container --
 | Longest transaction       | 0.30             |
 | Shortest transaction      | 0.01             |
 
-2. 25 concurrency
+#### 25 concurrency
 ```bash
 docker run --network=simple_server_default --rm simple-server-siege-container --concurrent=25 --time=30S
 ```
@@ -79,12 +80,12 @@ docker run --network=simple_server_default --rm simple-server-siege-container --
 | Longest transaction       | 0.46             |
 | Shortest transaction      | 0.02             |
 
-3. 50 concurrency
+####  50 concurrency
 ```bash
 docker run --network=simple_server_default --rm simple-server-siege-container --concurrent=50 --time=30S
 ```
 
-4. 100 concurrency
+####  100 concurrency
 ```bash
 docker run --network=simple_server_default --rm simple-server-siege-container --concurrent=100 --time=30S
 ```
