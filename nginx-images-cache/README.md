@@ -1,9 +1,9 @@
 # HW8. Web Servers - nginx cache
+Nginx config which serves static content(images) and caches response after 2+ hits and ability to manually invalidate cache.
 
 ### Endpoints
 - `/onlyfans_images/<filename>.png` - Folder with onlyfans images. For different variants see [folder](./onlyfans_images). This response is cached after 2 requests
 - `/purge/onlyfans_images/<filename>.png` - purges cache for this particular image
-- 
 ### How to run
 1. Create container
 ```bash
