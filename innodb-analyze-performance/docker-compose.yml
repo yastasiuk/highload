@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql:8.1
+    container_name: innodb-container
+    environment:
+      - MYSQL_ROOT_PASSWORD=pass
+      - MYSQL_DATABASE=projector
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=pass
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./mysql-innodb.cnf:/etc/mysql/conf.d/custom.cnf
+      - ./users-users-provision.sql:/etc/mysql/users-provision.sql
+
+volumes:
+  mysql-data:
