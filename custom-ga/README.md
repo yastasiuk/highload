@@ -35,3 +35,6 @@ docker run my_node_cron_container
 ```bash
 docker stop <container-id>
 ```
+
+### GA Report
+[GA Report](https://analytics.google.com/analytics/web/#/analysis/p406276117/edit/EuabBxWfTrCMBqAqJ_RPzA)
