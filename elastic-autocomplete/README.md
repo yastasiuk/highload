@@ -15,8 +15,6 @@ Create ES index that will serve autocomplete needs with leveraging typos and err
     4-grams: wuns, unsc, nsch, hpun, puns, unsc, nsch<br>
     If we match **wunshborsh** could return **wunschpunsch** though there are more than 3 errors and to handle this uses case we'd need to create separate indexes for larger words or manually reject words with low word similarity.<br>  
     _Potential Solution_: we can have multiple indexes for different word sizes and try utilizing "min_score" to prevent non-relevant suggestions. But overall we cannot allow "max 3 typos"
-```bash
-```
 3. Combine **fuzziness** and **n-gram**. Assuming that fuzziness will always work for 2 typos - we need to handle "1 more". In that case we can assume that most [1-3] ngrams will be handled by fuzziness, while we need to handle other bigger ngrams
 4. Utilizing some advances function indexes e.g. [kNN](https://www.elastic.co/guide/en/elasticsearch/reference/current/knn-search-api.html)
 
