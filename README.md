@@ -6,3 +6,4 @@
 1. [HW8. Web Servers - nginx cache](./nginx-images-cache/README.md) - nginx cache 
 1. [HW9. SQL Databases](./innodb-analyze-performance/README.md) - InnoDB indexes(btree, hash, no index) & innodb_flush_log_at_trx_commit comparison 
 1. [HW10. Transactions, Isolations, Locks](./isolation-and-locks/README.md) - Isolations & locks 
+1. [HW11. NoSQL Databases: Elasticsearch](./elastic-autocomplete/README.md) - Elastic index & autocomplete 
